@@ -7,6 +7,7 @@ public class Aim : MonoBehaviour
     Transform Crosshair;
     Vector3 course;
     Rotation circle;
+    bool move = false;
     void Start()
     {
        circle = GameObject.Find("Circle").GetComponent<Rotation>();
@@ -22,9 +23,19 @@ public class Aim : MonoBehaviour
         }*/
         if (Input.GetKey(KeyCode.Space))
         {
-            transform.position += course * 3 * Time.deltaTime;
+            move = true;
         }
-        
+        if (move)
+        {
+            transform.position += course * 6 * Time.deltaTime;
+        }
+
+
     }
-    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        move = false;
+        circle.rotate = true;
+
+    }
 }
