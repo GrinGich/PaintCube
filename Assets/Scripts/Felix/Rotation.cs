@@ -6,6 +6,7 @@ public class Rotation : MonoBehaviour
 {
     [SerializeField]
     private int rotationSpeed;
+    public bool rotate = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,13 @@ public class Rotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0,0,rotationSpeed) * Time.deltaTime);
-
-        transform.position = transform.position + new Vector3(0,3) * Time.deltaTime;
+        if (rotate)
+        {
+         transform.Rotate(new Vector3(0, 0, rotationSpeed) * Time.deltaTime);
+        }
+        if(Input.GetKey(KeyCode.Space))
+        {
+            rotate = false;
+        }
     }
 }
