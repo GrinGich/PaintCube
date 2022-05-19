@@ -17,10 +17,7 @@ public class Aim : MonoBehaviour
     void Update()
     {
        course = (Crosshair.position - transform.position).normalized;
-       /* while(Input.GetKey(KeyCode.Space))
-        {
-            circle.rotate = false;
-        }*/
+
         if (Input.GetKey(KeyCode.Space))
         {
             move = true;
