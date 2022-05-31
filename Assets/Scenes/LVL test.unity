@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 131482096}
   m_Layer: 0
   m_Name: CoverSquare
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 171005222}
   m_Layer: 0
   m_Name: CoverSquare (4)
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3574,7 +3574,7 @@ GameObject:
   - component: {fileID: 279092327}
   m_Layer: 0
   m_Name: CoverSquare
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3860,7 +3860,7 @@ GameObject:
   - component: {fileID: 1075826622}
   m_Layer: 0
   m_Name: CoverSquare
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4017,6 +4017,102 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 237081445401256015, guid: d2819dbe4d279804b92af331cb62ca3c, type: 3}
   m_PrefabInstance: {fileID: 1651047214}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1158500666
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158500665}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3733756e8ffdd584cb046304fcef8083, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &1158500671
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4031,7 +4127,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4127,7 +4223,7 @@ GameObject:
   - component: {fileID: 1554207298}
   m_Layer: 0
   m_Name: CoverSquare (3)
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4250,6 +4346,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1158500671}
+    - target: {fileID: 237081445401256011, guid: d2819dbe4d279804b92af331cb62ca3c, type: 3}
+      propertyPath: audioSourcePaint
+      value: 
+      objectReference: {fileID: 1158500666}
     - target: {fileID: 237081445401256013, guid: d2819dbe4d279804b92af331cb62ca3c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4326,7 +4426,7 @@ GameObject:
   - component: {fileID: 2059549525}
   m_Layer: 0
   m_Name: CoverSquare (1)
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4448,7 +4548,7 @@ GameObject:
   - component: {fileID: 2087055759}
   m_Layer: 0
   m_Name: CoverSquare (2)
-  m_TagString: Untagged
+  m_TagString: paint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

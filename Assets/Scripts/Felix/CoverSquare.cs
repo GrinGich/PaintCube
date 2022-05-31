@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class CoverSquare : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (true)
