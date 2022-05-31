@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class Aim : MonoBehaviour
-{
+{   
+    [SerializeField]
+    AudioSource audioSource;
     [SerializeField]
     Transform Crosshair;
     Vector3 course;
@@ -11,6 +13,8 @@ public class Aim : MonoBehaviour
     void Start()
     {
        circle = GameObject.Find("Circle").GetComponent<Rotation>();
+
+        
     }
 
     
@@ -33,6 +37,13 @@ public class Aim : MonoBehaviour
     {
         move = false;
         circle.rotate = true;
-
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "wall")
+        {
+            audioSource.Play();
+        }
     }
 }
