@@ -8,15 +8,19 @@ public class MapManager : MonoBehaviour
     //This line of code creates a reference to the tilemap.
     [SerializeField]
     private Tilemap map;
+    
     [SerializeField]
     TileBase måladTile;
 
+    [SerializeField]
+    public Transform Player;
     private void Update()
     {
-        //Ersätt 0,0,0 med spelarens position
-        //if (map.GetTile(new Vector3Int(GameObject.FindWithTag("player").transform.position)).name == "Blank")
+        /*This line of code turns the coordinates of the player and transforms them into a vector, 
+          and checks if those coordinates are above a tile*/
+        if (map.GetTile(Vector3Int.FloorToInt(Player.position)).name == "Blank")
         {
-            map.SetTile(new Vector3Int(0, 0, 0),måladTile);
+            map.SetTile(Vector3Int.FloorToInt(Player.position), måladTile);
         }
     }
 }

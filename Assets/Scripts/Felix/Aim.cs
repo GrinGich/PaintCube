@@ -4,6 +4,8 @@ using UnityEngine;
 public class Aim : MonoBehaviour
 {
     [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
     Transform Crosshair;
     Vector3 course;
     Rotation circle;
@@ -11,16 +13,15 @@ public class Aim : MonoBehaviour
     void Start()
     {
        circle = GameObject.Find("Circle").GetComponent<Rotation>();
+
+        
     }
 
     
     void Update()
     {
        course = (Crosshair.position - transform.position).normalized;
-       /* while(Input.GetKey(KeyCode.Space))
-        {
-            circle.rotate = false;
-        }*/
+
         if (Input.GetKey(KeyCode.Space))
         {
             move = true;
@@ -36,6 +37,13 @@ public class Aim : MonoBehaviour
     {
         move = false;
         circle.rotate = true;
-
+       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "wall")
+        {
+            audioSource.Play();
+        }
     }
 }
