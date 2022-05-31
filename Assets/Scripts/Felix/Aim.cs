@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class Aim : MonoBehaviour
-{   
+{
     [SerializeField]
     AudioSource audioSource;
     [SerializeField]
@@ -37,7 +37,7 @@ public class Aim : MonoBehaviour
     {
         move = false;
         circle.rotate = true;
-        
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
