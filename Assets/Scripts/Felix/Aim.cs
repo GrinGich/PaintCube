@@ -44,6 +44,7 @@ public class Aim : MonoBehaviour
         if (collision.transform.tag == "wall")
         {
             audioSource.Play();
+            print("HitSound!");
         }
     }
 }
